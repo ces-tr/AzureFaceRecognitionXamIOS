@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceDetectionPOC", "FaceDetectionPOC\FaceDetectionPOC.csproj", "{3743B2A0-F27E-4BE4-80A5-93CF68B84178}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Release|iPhone.ActiveCfg = Release|iPhone
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Release|iPhone.Build.0 = Release|iPhone
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{3743B2A0-F27E-4BE4-80A5-93CF68B84178}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

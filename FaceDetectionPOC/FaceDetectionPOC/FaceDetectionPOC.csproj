@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{3743B2A0-F27E-4BE4-80A5-93CF68B84178}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FaceDetectionPOC</RootNamespace>
+    <AssemblyName>FaceDetectionPOC</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: ces.tr.rv@gmail.com (5ZG8QUGMM9)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>10553</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>iOS Team Provisioning Profile: com.cestr.FaceDetectionPOC</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: ces.tr.rv@gmail.com (5ZG8QUGMM9)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>21719</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>iOS Team Provisioning Profile: com.cestr.FaceDetectionPOC</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Common">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Common.DotNetStandard.1.0.0\lib\netstandard1.4\Microsoft.ProjectOxford.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Face">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Face.DotNetStandard.1.0.0\lib\netstandard1.4\Microsoft.ProjectOxford.Face.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Vision">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Vision.1.0.393\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Microsoft.ProjectOxford.Vision.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Splash\" />
+    <Folder Include="Views\FaceCamera\" />
+    <Folder Include="Views\FaceCamera\Cell\" />
+    <Folder Include="Views\FaceCamera\Source\" />
+    <Folder Include="Views\ListController\" />
+    <Folder Include="Views\ListController\Source\" />
+    <Folder Include="Views\ListController\Cell\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Utils\CoreUtil.cs" />
+    <Compile Include="Utils\ErrorTrackingHelper.cs" />
+    <Compile Include="Utils\FaceListManager.cs" />
+    <Compile Include="Utils\FaceServiceHelper.cs" />
+    <Compile Include="Utils\ImageAnalyzer.cs" />
+    <Compile Include="Utils\VisionServiceHelper.cs" />
+    <Compile Include="UIExtensions.cs" />
+    <Compile Include="Views\Splash\SplashViewController.cs" />
+    <Compile Include="Views\Splash\SplashViewController.designer.cs">
+      <DependentUpon>..\..\..\..\..\Documents\iTexicoProjects\BinwayRunner\BinwayRunner.iOS\Views\Splash\SplashViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FaceCamera\FaceMainController.cs" />
+    <Compile Include="Views\FaceCamera\FaceMainController.designer.cs">
+      <DependentUpon>FaceMainController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\LiveCamHelper.cs" />
+    <Compile Include="Views\FaceCamera\Cell\RightPanelTableViewCell.cs" />
+    <Compile Include="Views\FaceCamera\Cell\RightPanelTableViewCell.designer.cs">
+      <DependentUpon>RightPanelTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FaceCamera\Source\RightPanelTableViewSource.cs" />
+    <Compile Include="Views\ListController\Source\MyListTableSource.cs" />
+    <Compile Include="Views\ListController\Cell\MyTableViewCell.cs" />
+    <Compile Include="Views\ListController\Cell\MyTableViewCell.designer.cs">
+      <DependentUpon>MyTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Workers.cs" />
+    <Compile Include="Utils\VideoCapture.cs" />
+    <Compile Include="Views\FaceDetectionViewController.cs" />
+    <Compile Include="Views\FaceDetectionViewController.designer.cs">
+      <DependentUpon>FaceDetectionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\FaceView.cs" />
+    <Compile Include="Views\PreviewView.cs" />
+    <Compile Include="Views\PreviewView.designer.cs">
+      <DependentUpon>PreviewView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExtractFace.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\Splash\SplashViewController.xib" />
+    <InterfaceDefinition Include="Views\FaceCamera\FaceMainController.xib" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Views\FaceCamera\Cell\RightPanelTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\ListController\Cell\MyTableViewCell.xib" />
+    <InterfaceDefinition Include="Views\FaceDetectionViewController.xib" />
+    <InterfaceDefinition Include="Views\PreviewView.xib" />
+    <InterfaceDefinition Include="Resources\CustomView.xib" />
+    <InterfaceDefinition Include="Resources\en.lproj\CustomView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\square.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>
